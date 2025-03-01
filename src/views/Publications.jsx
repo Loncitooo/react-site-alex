@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState } from "react";
-import ProjectCard from "../components/ProjectCard";
+import { PublicationCard } from "../components/PublicationCard";
 import { FiSearch } from "react-icons/fi";
 import { AiFillAliwangwang } from "react-icons/ai";
 
@@ -117,7 +117,7 @@ function PublicationsView() {
       ) : (
         <div className="grid grid-cols-[repeat(auto-fill,minmax(240px,1fr))] gap-8 md:grid-cols-[repeat(auto-fill,minmax(320px,1fr))]">
           {filteredPublications.map((publication, index) => (
-            <ProjectCard key={index} {...publication} />
+            <PublicationCard key={index} {...publication} />
           ))}
         </div>
       )}

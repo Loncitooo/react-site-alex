@@ -1,7 +1,7 @@
 import { CiRead } from "react-icons/ci";
 import { FaDownload } from "react-icons/fa";
 
-export function ProjectCard({ pdfLocation, coverImage, title, subtitle }) {
+export function PublicationCard({ pdfLocation, coverImage, title, subtitle }) {
   return (
     <div className="animate-slideIn flex flex-col rounded-lg shadow-lg">
       <img
@@ -44,4 +44,4 @@ export function ProjectCard({ pdfLocation, coverImage, title, subtitle }) {
   );
 }
 
-export default ProjectCard;
+export default PublicationCard;
