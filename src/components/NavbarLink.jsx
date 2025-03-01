@@ -5,7 +5,7 @@ function NavbarLink({ to, children }) {
     <NavLink
       to={to}
       className={({ isActive }) =>
-        isActive ? "text-emerald-300" : "text-white"
+        isActive ? "text-emerald-300" : "text-black"
       }
     >
       {children}
