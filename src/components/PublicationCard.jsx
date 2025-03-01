@@ -3,7 +3,7 @@ import { FaDownload } from "react-icons/fa";
 
 export function PublicationCard({ pdfLocation, coverImage, title, subtitle }) {
   return (
-    <div className="animate-slideIn flex flex-col rounded-lg shadow-lg">
+    <div className="animate-slideIn flex flex-col rounded-lg shadow-lg transition-all delay-200 hover:shadow-2xl">
       <img
         src={coverImage}
         alt={title}

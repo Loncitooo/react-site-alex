@@ -4,7 +4,7 @@ import { IoPeopleSharp } from "react-icons/io5";
 
 function ProjectsView() {
   return (
-    <section className="mx-auto mt-20 flex max-w-screen-2xl flex-col gap-8 p-4 py-0 md:p-8">
+    <section className="mx-auto mt-20 flex max-w-screen-2xl flex-col gap-8 p-4 pt-0 md:p-8">
       <div className="flex flex-col gap-2">
         <h1 className="animate-fadeIn text-3xl font-bold text-gray-900 md:text-4xl">
           My <span className="text-orange-500">Projects</span>

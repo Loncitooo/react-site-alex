@@ -20,7 +20,7 @@ function Navbar() {
         {/* Menú para pantallas grandes */}
         <nav className="hidden space-x-6 md:flex">
           <NavbarLink to="/">Home</NavbarLink>
-          <NavbarLink to="/publicaciones">Publications</NavbarLink>
+          <NavbarLink to="/publicaciones">Publications & Courses</NavbarLink>
           <NavbarLink to="/proyectos">Projects</NavbarLink>
           <NavbarLink to="/media">Media</NavbarLink>
         </nav>
@@ -28,7 +28,7 @@ function Navbar() {
         {/* Botón de menú móvil */}
         <button
           onClick={toggleMenu}
-          className="text-2xl text-gray-900 focus:outline-none md:hidden"
+          className="cursor-pointer text-2xl text-gray-900 focus:outline-none md:hidden"
           aria-label="Toggle menu"
         >
           {isMenuOpen ? <FaTimes /> : <FaBars />}
@@ -43,7 +43,7 @@ function Navbar() {
               Home
             </NavbarLink>
             <NavbarLink to="/publicaciones" onClick={toggleMenu}>
-              Publications
+              Publications & Courses
             </NavbarLink>
             <NavbarLink to="/proyectos" onClick={toggleMenu}>
               Projects

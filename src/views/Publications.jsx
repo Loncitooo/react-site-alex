@@ -51,9 +51,15 @@ function PublicationsView() {
       {
         pdfLocation: "/pdfs/publications/8.pdf",
         coverImage: "/images/publications/8.webp",
-        title: "New Frontiers of the Automobile Industry ",
+        title: "New Frontiers of the Automobile Industry",
         subtitle:
           "Exploring Geographies, Technology, and Institutional Challenges",
+      },
+      {
+        pdfLocation: "/pdfs/courses/CursoMovilidadesSustentables.pdf",
+        coverImage: "/images/courses/CursoMovilidadesSustentables.webp",
+        title:
+          "Sustainable Mobilities Course for the PhD in Urban and Environmental Studies.",
       },
     ];
   }, []);
@@ -85,7 +91,7 @@ function PublicationsView() {
   };
 
   return (
-    <section className="mx-auto mt-20 flex max-w-screen-2xl flex-col gap-8 p-8 pt-0">
+    <section className="mx-auto mt-20 flex max-w-screen-2xl flex-col gap-8 p-4 pt-0 md:p-8">
       <div className="flex flex-col gap-2">
         <h1 className="animate-fadeIn text-3xl font-bold text-gray-900 md:text-4xl">
           My <span className="text-orange-500">Publications</span>
@@ -109,9 +115,9 @@ function PublicationsView() {
       </div>
       {filteredPublications.length === 0 ? (
         <div className="animate-fadeIn flex flex-col items-center">
-          <AiFillAliwangwang className="text-center text-8xl text-gray-600" />
+          <AiFillAliwangwang className="text-center text-8xl text-orange-500" />
           <p className="text-center text-xl text-gray-600">
-            No publications found
+            No publications or courses found
           </p>
         </div>
       ) : (
