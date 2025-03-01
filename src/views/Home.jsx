@@ -7,6 +7,10 @@ import {
   FaTwitter,
   FaHandshake,
   FaDownload,
+  FaFilePdf,
+  FaEnvelope,
+  FaUserGraduate,
+  FaUniversity,
 } from "react-icons/fa"; // Importa íconos de redes sociales y para los botones
 
 const HomeView = () => {
@@ -18,6 +22,18 @@ const HomeView = () => {
   const handleResumeDownload = async () => {
     await new Promise((resolve) => setTimeout(resolve, 500));
     alert("Downloading Resume...");
+  };
+
+  const handleCVDownload = () => {
+    window.open("https://alexcovarrubias.com.mx/VitaBrief-AlexCovarrubias-01-25.pdf", "_blank");
+  };
+
+  const handleBriefCVDownload = () => {
+    window.open("https://alexcovarrubias.com.mx/VitaBrief-AlexCovarrubias-01-25.pdf", "_blank");
+  };
+
+  const handleMotivationLetterDownload = () => {
+    window.open("https://alexcovarrubias.com.mx/MotivationLetterAlexCovarrubias.pdf", "_blank");
   };
 
   return (
@@ -36,43 +52,60 @@ const HomeView = () => {
         {/* Text Section */}
         <div className="flex-1 text-center md:text-left">
           <h1 className="animate-fadeIn mb-4 text-5xl font-bold text-gray-900">
-            HELLO, I'M <span className="text-orange-500">ALEX</span>
+            HELLO, I'M <span className="text-orange-500">ALEX COVARRUBIAS VALDENEBRO</span>
           </h1>
-          <p className="animate-fadeIn mb-6 text-lg text-gray-600 delay-100">
-            My mission is to create digital solutions that are as{" "}
-            <span className="font-semibold text-gray-800">functional</span> as
-            they are{" "}
-            <span className="font-semibold text-gray-800">
-              visually engaging
-            </span>
-            .
-          </p>
-          <p className="animate-fadeIn mb-8 text-gray-600 delay-150">
-            With over 5 years of experience in web development and design, I
-            specialize in building modern, responsive, and user-friendly
-            applications. Let's work together to bring your ideas to life!
-          </p>
-          <div className="animate-fadeIn flex flex-col justify-center gap-4 delay-200 md:flex-row md:justify-start">
+
+          {/* Información de Alex con íconos */}
+          <div className="animate-fadeIn mb-6 text-gray-600 delay-200 flex flex-col gap-2">
+            <div className="flex items-center gap-2">
+              <FaUserGraduate className="text-gray-700" />
+              <p>Degree: Doctor in Industrial and Labor Relations. Cornell University</p>
+            </div>
+            <div className="flex items-center gap-2">
+              <FaUniversity className="text-gray-700" />
+              <p>Affiliation: Center for Border Studies</p>
+            </div>
+            <div className="flex items-center gap-2">
+              <FaEnvelope className="text-gray-700" />
+              <a
+                href="mailto:acova@colson.edu.mx"
+                className="text-gray-700 hover:text-orange-500"
+              >
+                   acova@colson.edu.mx
+              </a>
+            </div>
+          </div>
+
+          {/* Botones de enlaces */}
+          <div className="animate-fadeIn flex flex-col justify-center gap-4 delay-400 md:flex-row md:justify-start">
             <button
-              onClick={handleWorkClick}
-              className="flex transform items-center justify-center rounded-full bg-orange-500 px-8 py-3 text-white shadow-lg transition-all hover:scale-105 hover:bg-orange-600 hover:shadow-xl focus:ring-2 focus:ring-orange-500 focus:ring-offset-2 focus:outline-none"
-              aria-label="Work with me"
+              onClick={handleCVDownload}
+              className="flex transform items-center justify-center rounded-full bg-orange-500 px-4 py-2 text-sm text-white shadow-lg transition-all hover:scale-105 hover:bg-orange-600 hover:shadow-xl focus:ring-2 focus:ring-orange-500 focus:ring-offset-2 focus:outline-none"
+              aria-label="View Full CV"
             >
-              <FaHandshake className="mr-2" /> {/* Ícono de colaboración */}
-              Work with me
+              <FaFilePdf className="mr-2" />
+              View Full CV
             </button>
             <button
-              onClick={handleResumeDownload}
-              className="flex transform items-center justify-center rounded-full border-2 border-orange-500 bg-transparent px-8 py-3 text-orange-500 shadow-lg transition-all hover:scale-105 hover:bg-orange-500 hover:text-white hover:shadow-xl focus:ring-2 focus:ring-orange-500 focus:ring-offset-2 focus:outline-none"
-              aria-label="Download Resume"
+              onClick={handleBriefCVDownload}
+              className="flex transform items-center justify-center rounded-full bg-orange-500 px-4 py-2 text-sm text-white shadow-lg transition-all hover:scale-105 hover:bg-orange-600 hover:shadow-xl focus:ring-2 focus:ring-orange-500 focus:ring-offset-2 focus:outline-none"
+              aria-label="View Brief CV"
             >
-              <FaDownload className="mr-2" /> {/* Ícono de descarga */}
-              Download Resume
+              <FaFilePdf className="mr-2" />
+              View Brief CV
+            </button>
+            <button
+              onClick={handleMotivationLetterDownload}
+              className="flex transform items-center justify-center rounded-full bg-orange-500 px-4 py-2 text-sm text-white shadow-lg transition-all hover:scale-105 hover:bg-orange-600 hover:shadow-xl focus:ring-2 focus:ring-orange-500 focus:ring-offset-2 focus:outline-none"
+              aria-label="View Motivation Letter"
+            >
+              <FaFilePdf className="mr-2" />
+              View Motivation Letter
             </button>
           </div>
 
           {/* Redes sociales */}
-          <div className="animate-fadeIn mt-8 flex justify-center gap-6 delay-400 md:justify-start">
+          <div className="animate-fadeIn mt-8 flex justify-center gap-6 delay-500 md:justify-start">
             <a
               href="https://www.linkedin.com/in/alex"
               target="_blank"
