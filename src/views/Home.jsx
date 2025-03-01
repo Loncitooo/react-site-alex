@@ -1,6 +1,13 @@
 import React from "react";
 import profileImage from "/images/alex/alex_sonriendo.png"; // Ruta de la imagen de perfil
-import { FaLinkedin, FaGithub, FaInstagram, FaTwitter, FaHandshake, FaDownload } from "react-icons/fa"; // Importa íconos de redes sociales y para los botones
+import {
+  FaLinkedin,
+  FaGithub,
+  FaInstagram,
+  FaTwitter,
+  FaHandshake,
+  FaDownload,
+} from "react-icons/fa"; // Importa íconos de redes sociales y para los botones
 
 const HomeView = () => {
   const handleWorkClick = async () => {
@@ -14,36 +21,41 @@ const HomeView = () => {
   };
 
   return (
-    <main className="bg-gray-50 min-h-screen flex items-center justify-center p-6 font-sans relative overflow-hidden pt-24 md:pt-16">
+    <main className="relative flex min-h-screen items-center justify-center overflow-hidden bg-gray-50 p-6 pt-24 md:pt-16">
       {/* Figuras decorativas */}
-      <div className="absolute inset-0 overflow-hidden z-0">
+      <div className="absolute inset-0 z-0 overflow-hidden">
         {/* Círculo grande */}
-        <div className="absolute w-64 h-64 bg-orange-400 rounded-full -top-32 -left-32 animate-float" />
+        <div className="animate-float absolute -top-32 -left-32 h-64 w-64 rounded-full bg-orange-400" />
         {/* Triángulo */}
-        <div className="absolute w-48 h-48 bg-purple-500 clip-triangle -bottom-24 -right-24 animate-float delay-1000" />
+        <div className="clip-triangle animate-float absolute -right-24 -bottom-24 h-48 w-48 bg-purple-500 delay-1000" />
         {/* Cuadrado */}
-        <div className="absolute w-40 h-40 bg-blue-400 rotate-45 -top-16 right-16 animate-float delay-2000" />
+        <div className="animate-float absolute -top-16 right-16 h-40 w-40 rotate-45 bg-blue-400 delay-2000" />
       </div>
 
-      <section className="w-full max-w-6xl flex flex-col md:flex-row items-center gap-12 z-10">
-
+      <section className="z-10 flex w-full max-w-6xl flex-col items-center gap-12 md:flex-row">
         {/* Text Section */}
         <div className="flex-1 text-center md:text-left">
-          <h1 className="text-5xl font-bold text-gray-900 mb-4 animate-fadeIn">
+          <h1 className="animate-fadeIn mb-4 text-5xl font-bold text-gray-900">
             HELLO, I'M <span className="text-orange-500">ALEX</span>
           </h1>
-          <p className="text-lg text-gray-600 mb-6 animate-fadeIn delay-100">
+          <p className="animate-fadeIn mb-6 text-lg text-gray-600 delay-100">
             My mission is to create digital solutions that are as{" "}
-            <span className="font-semibold text-gray-800">functional</span> as they are{" "}
-            <span className="font-semibold text-gray-800">visually engaging</span>.
+            <span className="font-semibold text-gray-800">functional</span> as
+            they are{" "}
+            <span className="font-semibold text-gray-800">
+              visually engaging
+            </span>
+            .
           </p>
-          <p className="text-gray-600 mb-8 animate-fadeIn delay-150">
-            With over 5 years of experience in web development and design, I specialize in building modern, responsive, and user-friendly applications. Let's work together to bring your ideas to life!
+          <p className="animate-fadeIn mb-8 text-gray-600 delay-150">
+            With over 5 years of experience in web development and design, I
+            specialize in building modern, responsive, and user-friendly
+            applications. Let's work together to bring your ideas to life!
           </p>
-          <div className="flex flex-col md:flex-row gap-4 justify-center md:justify-start animate-fadeIn delay-200">
+          <div className="animate-fadeIn flex flex-col justify-center gap-4 delay-200 md:flex-row md:justify-start">
             <button
               onClick={handleWorkClick}
-              className="flex items-center justify-center bg-orange-500 text-white px-8 py-3 rounded-full hover:bg-orange-600 transition-all transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2 shadow-lg hover:shadow-xl"
+              className="flex transform items-center justify-center rounded-full bg-orange-500 px-8 py-3 text-white shadow-lg transition-all hover:scale-105 hover:bg-orange-600 hover:shadow-xl focus:ring-2 focus:ring-orange-500 focus:ring-offset-2 focus:outline-none"
               aria-label="Work with me"
             >
               <FaHandshake className="mr-2" /> {/* Ícono de colaboración */}
@@ -51,7 +63,7 @@ const HomeView = () => {
             </button>
             <button
               onClick={handleResumeDownload}
-              className="flex items-center justify-center bg-transparent border-2 border-orange-500 text-orange-500 px-8 py-3 rounded-full hover:bg-orange-500 hover:text-white transition-all transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2 shadow-lg hover:shadow-xl"
+              className="flex transform items-center justify-center rounded-full border-2 border-orange-500 bg-transparent px-8 py-3 text-orange-500 shadow-lg transition-all hover:scale-105 hover:bg-orange-500 hover:text-white hover:shadow-xl focus:ring-2 focus:ring-orange-500 focus:ring-offset-2 focus:outline-none"
               aria-label="Download Resume"
             >
               <FaDownload className="mr-2" /> {/* Ícono de descarga */}
@@ -60,12 +72,12 @@ const HomeView = () => {
           </div>
 
           {/* Redes sociales */}
-          <div className="flex justify-center md:justify-start gap-6 mt-8 animate-fadeIn delay-400">
+          <div className="animate-fadeIn mt-8 flex justify-center gap-6 delay-400 md:justify-start">
             <a
               href="https://www.linkedin.com/in/alex"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-700 hover:text-orange-500 transition-colors transform hover:scale-110"
+              className="transform text-gray-700 transition-colors hover:scale-110 hover:text-orange-500"
               aria-label="LinkedIn"
             >
               <FaLinkedin size={28} />
@@ -74,7 +86,7 @@ const HomeView = () => {
               href="https://github.com/alex"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-700 hover:text-orange-500 transition-colors transform hover:scale-110"
+              className="transform text-gray-700 transition-colors hover:scale-110 hover:text-orange-500"
               aria-label="GitHub"
             >
               <FaGithub size={28} />
@@ -83,7 +95,7 @@ const HomeView = () => {
               href="https://www.instagram.com/alex"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-700 hover:text-orange-500 transition-colors transform hover:scale-110"
+              className="transform text-gray-700 transition-colors hover:scale-110 hover:text-orange-500"
               aria-label="Instagram"
             >
               <FaInstagram size={28} />
@@ -92,7 +104,7 @@ const HomeView = () => {
               href="https://twitter.com/alex"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-700 hover:text-orange-500 transition-colors transform hover:scale-110"
+              className="transform text-gray-700 transition-colors hover:scale-110 hover:text-orange-500"
               aria-label="Twitter"
             >
               <FaTwitter size={28} />
@@ -101,18 +113,18 @@ const HomeView = () => {
         </div>
 
         {/* Diseño y seccion de imagen */}
-        <div className="relative flex-shrink-0 w-72 h-72 md:w-96 md:h-96">
+        <div className="relative h-72 w-72 flex-shrink-0 md:h-96 md:w-96">
           {/* Marco decorativo */}
-          <div className="absolute inset-0 bg-gradient-to-r from-orange-400 to-purple-500 rounded-2xl transform rotate-6 -z-10 animate-slideIn" />
-          <div className="absolute inset-0 bg-white rounded-2xl transform -rotate-3 -z-10" />
-          
+          <div className="animate-slideIn absolute inset-0 -z-10 rotate-6 transform rounded-2xl bg-gradient-to-r from-orange-400 to-purple-500" />
+          <div className="absolute inset-0 -z-10 -rotate-3 transform rounded-2xl bg-white" />
+
           {/* Imagen superpuesta */}
-          <div className="relative w-full h-full flex items-center justify-center">
-            <div className="w-full h-full rounded-2xl overflow-hidden shadow-2xl">
+          <div className="relative flex h-full w-full items-center justify-center">
+            <div className="h-full w-full overflow-hidden rounded-2xl shadow-2xl">
               <img
                 src={profileImage}
                 alt="Alex smiling"
-                className="w-full h-full object-cover rounded-2xl animate-fadeIn delay-300"
+                className="animate-fadeIn h-full w-full rounded-2xl object-cover delay-300"
               />
             </div>
           </div>
