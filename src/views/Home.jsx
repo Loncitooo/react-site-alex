@@ -1,11 +1,12 @@
 import React from "react";
+// import {Brief} from "./home/brief-section";
 import { useTranslation } from "react-i18next"; // Importar useTranslation
 import profileImage from "/images/alex/alex_sonriendo.png";
+import { FaXTwitter } from "react-icons/fa6";
 import {
   FaLinkedin,
   FaGithub,
   FaInstagram,
-  FaTwitter,
   FaFilePdf,
   FaEnvelope,
   FaUserGraduate,
@@ -37,7 +38,7 @@ const HomeView = () => {
   };
 
   return (
-    <main className="relative flex min-h-screen items-center justify-center overflow-hidden bg-gray-50 p-6 pt-24 md:pt-16">
+    <main className="relative flex flex-col gap-4 min-h-screen items-center justify-center overflow-hidden bg-gray-50 p-6 pt-24 md:pt-16">
       {/* Figuras decorativas */}
       <div className="absolute inset-0 z-0 overflow-hidden">
         {/* Círculo grande */}
@@ -65,11 +66,11 @@ const HomeView = () => {
               <FaUniversity className="min-h-4 min-w-4 text-gray-700" />
               <p>{t("affiliation")}</p>
             </div>
-            <div className="flex items-center gap-2">
-              <FaEnvelope className="min-h-4 min-w-4 text-gray-700" />
+            <div className="flex items-center gap-2 justify-center md:justify-start">
+              <FaEnvelope className="flex items-start min-h-4 min-w-4 text-gray-700" />
               <a
                 href="mailto:acova@colson.edu.mx"
-                className="text-gray-700 hover:text-orange-500"
+                className="text-gray-700 hover:text-orange-500 "
               >
                 {t("email")}
               </a>
@@ -108,40 +109,40 @@ const HomeView = () => {
           {/* Redes sociales */}
           <div className="animate-fadeIn mt-8 flex justify-center gap-6 delay-500 md:justify-start">
             <a
-              href="https://www.linkedin.com/in/alex"
+              href="#"
               target="_blank"
               rel="noopener noreferrer"
-              className="transform text-gray-700 transition-colors hover:scale-110 hover:text-orange-500"
+              className="transform text-gray-700 transition-colors  duration-500 hover:text-orange-500"
               aria-label="LinkedIn"
             >
               <FaLinkedin size={28} />
             </a>
             <a
-              href="https://github.com/alex"
+              href="#"
               target="_blank"
               rel="noopener noreferrer"
-              className="transform text-gray-700 transition-colors hover:scale-110 hover:text-orange-500"
+              className="transform text-gray-700 duration-500 transition-colors  hover:text-orange-500"
               aria-label="GitHub"
             >
               <FaGithub size={28} />
             </a>
             <a
-              href="https://www.instagram.com/alex"
+              href="#"
               target="_blank"
               rel="noopener noreferrer"
-              className="transform text-gray-700 transition-colors hover:scale-110 hover:text-orange-500"
+              className="transform text-gray-700 transition-colors duration-500 hover:text-orange-500"
               aria-label="Instagram"
             >
               <FaInstagram size={28} />
             </a>
             <a
-              href="https://twitter.com/alex"
+              href="#"
               target="_blank"
               rel="noopener noreferrer"
-              className="transform text-gray-700 transition-colors hover:scale-110 hover:text-orange-500"
+              className="transform text-gray-700 transition-colors duration-500 hover:text-orange-500"
               aria-label="Twitter"
             >
-              <FaTwitter size={28} />
+              <FaXTwitter size={28} />
             </a>
           </div>
         </div>
@@ -164,6 +165,8 @@ const HomeView = () => {
           </div>
         </div>
       </section>
+            {/* Sección de resumen */}
+            {/* <Brief/> */}
     </main>
   );
 };
