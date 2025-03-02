@@ -6,6 +6,7 @@ import MainLayout from "./layouts/MainLayout.jsx";
 import PublicationsView from "./views/Publications.jsx";
 import ProjectsView from "./views/Projects.jsx";
 import MediaView from "./views/Media.jsx";
+import "./i18n"; // Importar la configuración de i18n
 
 createRoot(document.getElementById("root")).render(
   <BrowserRouter>

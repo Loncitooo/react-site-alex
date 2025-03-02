@@ -1,28 +1,19 @@
 import React from "react";
-import profileImage from "/images/alex/alex_sonriendo.png"; // Ruta de la imagen de perfil
+import { useTranslation } from "react-i18next"; // Importar useTranslation
+import profileImage from "/images/alex/alex_sonriendo.png";
 import {
   FaLinkedin,
   FaGithub,
   FaInstagram,
   FaTwitter,
-  FaHandshake,
-  FaDownload,
   FaFilePdf,
   FaEnvelope,
   FaUserGraduate,
   FaUniversity,
-} from "react-icons/fa"; // Importa íconos de redes sociales y para los botones
+} from "react-icons/fa";
 
 const HomeView = () => {
-  const handleWorkClick = async () => {
-    await new Promise((resolve) => setTimeout(resolve, 500));
-    alert("Navigating to Work with Me page...");
-  };
-
-  const handleResumeDownload = async () => {
-    await new Promise((resolve) => setTimeout(resolve, 500));
-    alert("Downloading Resume...");
-  };
+  const { t } = useTranslation(); // Obtener la función de traducción
 
   const handleCVDownload = () => {
     window.open("https://alexcovarrubias.com.mx/VitaBrief-AlexCovarrubias-01-25.pdf", "_blank");
@@ -52,18 +43,18 @@ const HomeView = () => {
         {/* Text Section */}
         <div className="flex-1 text-center md:text-left">
           <h1 className="animate-fadeIn mb-4 text-5xl font-bold text-gray-900">
-            HELLO, I'M <span className="text-orange-500">ALEX COVARRUBIAS VALDENEBRO</span>
+            {t("hello")} <span className="text-orange-500">{t("name")}</span>
           </h1>
 
           {/* Información de Alex con íconos */}
           <div className="animate-fadeIn mb-6 text-gray-600 delay-200 flex flex-col gap-2">
             <div className="flex items-center gap-2">
               <FaUserGraduate className="text-gray-700" />
-              <p>Degree: Doctor in Industrial and Labor Relations. Cornell University</p>
+              <p>{t("degree")}</p>
             </div>
             <div className="flex items-center gap-2">
               <FaUniversity className="text-gray-700" />
-              <p>Affiliation: Center for Border Studies</p>
+              <p>{t("affiliation")}</p>
             </div>
             <div className="flex items-center gap-2">
               <FaEnvelope className="text-gray-700" />
@@ -71,7 +62,7 @@ const HomeView = () => {
                 href="mailto:acova@colson.edu.mx"
                 className="text-gray-700 hover:text-orange-500"
               >
-                   acova@colson.edu.mx
+                {t("email")}
               </a>
             </div>
           </div>
@@ -84,7 +75,7 @@ const HomeView = () => {
               aria-label="View Full CV"
             >
               <FaFilePdf className="mr-2" />
-              View Full CV
+              {t("viewFullCV")}
             </button>
             <button
               onClick={handleBriefCVDownload}
@@ -92,7 +83,7 @@ const HomeView = () => {
               aria-label="View Brief CV"
             >
               <FaFilePdf className="mr-2" />
-              View Brief CV
+              {t("viewBriefCV")}
             </button>
             <button
               onClick={handleMotivationLetterDownload}
@@ -100,7 +91,7 @@ const HomeView = () => {
               aria-label="View Motivation Letter"
             >
               <FaFilePdf className="mr-2" />
-              View Motivation Letter
+              {t("viewMotivationLetter")}
             </button>
           </div>
 

@@ -1,12 +1,20 @@
 import React, { useState } from "react";
+import { useTranslation } from "react-i18next"; // Importar useTranslation
 import NavbarLink from "../../components/NavbarLink";
-import { FaBars, FaTimes } from "react-icons/fa"; // Íconos para el menú móvil
+import { FaBars, FaTimes, FaGlobe } from "react-icons/fa";
 
 function Navbar() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false); // Estado para controlar el menú móvil
+  const { t, i18n } = useTranslation(); // Obtener la función de traducción y i18n
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
+  };
+
+  // Función para cambiar el idioma
+  const toggleLanguage = () => {
+    const newLanguage = i18n.language === "es" ? "en" : "es";
+    i18n.changeLanguage(newLanguage);
   };
 
   return (
@@ -18,11 +26,21 @@ function Navbar() {
         </a>
 
         {/* Menú para pantallas grandes */}
-        <nav className="hidden space-x-6 md:flex">
-          <NavbarLink to="/">Home</NavbarLink>
-          <NavbarLink to="/publicaciones">Publications & Courses</NavbarLink>
-          <NavbarLink to="/proyectos">Projects</NavbarLink>
-          <NavbarLink to="/media">Media</NavbarLink>
+        <nav className="hidden items-center space-x-6 md:flex">
+          <NavbarLink to="/">{t("home")}</NavbarLink>
+          <NavbarLink to="/publicaciones">{t("publications")}</NavbarLink>
+          <NavbarLink to="/proyectos">{t("projects")}</NavbarLink>
+          <NavbarLink to="/media">{t("media")}</NavbarLink>
+
+          {/* Botón para cambiar idioma */}
+          <button
+            onClick={toggleLanguage}
+            className="flex transform items-center justify-center rounded-full bg-orange-500 px-4 py-2 text-sm text-white shadow-lg transition-all hover:scale-105 hover:bg-orange-600 hover:shadow-xl focus:ring-2 focus:ring-orange-500 focus:ring-offset-2 focus:outline-none"
+            aria-label="Change Language"
+          >
+            <FaGlobe className="mr-2" />
+            {t("changeLanguage")}
+          </button>
         </nav>
 
         {/* Botón de menú móvil */}
@@ -40,17 +58,27 @@ function Navbar() {
         <div className="bg-opacity-95 mt-4 bg-white py-4 shadow-lg md:hidden">
           <nav className="flex flex-col items-center space-y-4">
             <NavbarLink to="/" onClick={toggleMenu}>
-              Home
+              {t("home")}
             </NavbarLink>
             <NavbarLink to="/publicaciones" onClick={toggleMenu}>
-              Publications & Courses
+              {t("publications")}
             </NavbarLink>
             <NavbarLink to="/proyectos" onClick={toggleMenu}>
-              Projects
+              {t("projects")}
             </NavbarLink>
             <NavbarLink to="/media" onClick={toggleMenu}>
-              Media
+              {t("media")}
             </NavbarLink>
+
+            {/* Botón para cambiar idioma en menú móvil */}
+            <button
+              onClick={toggleLanguage}
+              className="flex transform items-center justify-center rounded-full bg-orange-500 px-4 py-2 text-sm text-white shadow-lg transition-all hover:scale-105 hover:bg-orange-600 hover:shadow-xl focus:ring-2 focus:ring-orange-500 focus:ring-offset-2 focus:outline-none"
+              aria-label="Change Language"
+            >
+              <FaGlobe className="mr-2" />
+              {t("changeLanguage")}
+            </button>
           </nav>
         </div>
       )}
