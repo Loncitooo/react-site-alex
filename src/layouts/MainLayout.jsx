@@ -4,7 +4,7 @@ import Navbar from "./partials/Navbar";
 
 function MainLayout() {
   return (
-    <div className="flex min-h-screen flex-col">
+    <div>
       <Navbar />
       <main className="flex-1">
         <Outlet />
