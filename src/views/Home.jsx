@@ -70,7 +70,7 @@ const HomeView = () => {
               <FaEnvelope className="flex items-start min-h-4 min-w-4 text-gray-700" />
               <a
                 href="mailto:acova@colson.edu.mx"
-                className="text-gray-700 hover:text-orange-500 "
+                className="text-gray-700 hover:text-orange-500"
               >
                 {t("email")}
               </a>
