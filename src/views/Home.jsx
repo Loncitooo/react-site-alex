@@ -1,5 +1,5 @@
 import React from "react";
-import {Brief} from "./home/brief-section";
+// import {Brief} from "./home/brief-section";
 import { useTranslation } from "react-i18next"; // Importar useTranslation
 import profileImage from "/images/alex/alex_sonriendo.png";
 import { FaXTwitter } from "react-icons/fa6";
@@ -66,11 +66,11 @@ const HomeView = () => {
               <FaUniversity className="min-h-4 min-w-4 text-gray-700" />
               <p>{t("affiliation")}</p>
             </div>
-            <div className="flex items-center gap-2">
-              <FaEnvelope className="min-h-4 min-w-4 text-gray-700" />
+            <div className="flex items-center gap-2 justify-center md:justify-start">
+              <FaEnvelope className="flex items-start min-h-4 min-w-4 text-gray-700" />
               <a
                 href="mailto:acova@colson.edu.mx"
-                className="text-gray-700 hover:text-orange-500"
+                className="text-gray-700 hover:text-orange-500 "
               >
                 {t("email")}
               </a>
@@ -166,7 +166,7 @@ const HomeView = () => {
         </div>
       </section>
             {/* Sección de resumen */}
-            <Brief/>
+            {/* <Brief/> */}
     </main>
   );
 };
