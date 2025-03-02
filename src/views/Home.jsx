@@ -16,15 +16,24 @@ const HomeView = () => {
   const { t } = useTranslation(); // Obtener la función de traducción
 
   const handleCVDownload = () => {
-    window.open("https://alexcovarrubias.com.mx/VitaBrief-AlexCovarrubias-01-25.pdf", "_blank");
+    window.open(
+      "https://alexcovarrubias.com.mx/VitaBrief-AlexCovarrubias-01-25.pdf",
+      "_blank",
+    );
   };
 
   const handleBriefCVDownload = () => {
-    window.open("https://alexcovarrubias.com.mx/VitaBrief-AlexCovarrubias-01-25.pdf", "_blank");
+    window.open(
+      "https://alexcovarrubias.com.mx/VitaBrief-AlexCovarrubias-01-25.pdf",
+      "_blank",
+    );
   };
 
   const handleMotivationLetterDownload = () => {
-    window.open("https://alexcovarrubias.com.mx/MotivationLetterAlexCovarrubias.pdf", "_blank");
+    window.open(
+      "https://alexcovarrubias.com.mx/MotivationLetterAlexCovarrubias.pdf",
+      "_blank",
+    );
   };
 
   return (
@@ -42,22 +51,22 @@ const HomeView = () => {
       <section className="z-10 flex w-full max-w-6xl flex-col items-center gap-12 md:flex-row">
         {/* Text Section */}
         <div className="flex-1 text-center md:text-left">
-          <h1 className="animate-fadeIn mb-4 text-5xl font-bold text-gray-900">
+          <h1 className="animate-fadeIn mb-4 text-3xl font-bold text-gray-900 md:text-5xl">
             {t("hello")} <span className="text-orange-500">{t("name")}</span>
           </h1>
 
           {/* Información de Alex con íconos */}
-          <div className="animate-fadeIn mb-6 text-gray-600 delay-200 flex flex-col gap-2">
+          <div className="animate-fadeIn mb-6 flex flex-col gap-2 text-gray-600 delay-200">
             <div className="flex items-center gap-2">
-              <FaUserGraduate className="text-gray-700" />
+              <FaUserGraduate className="min-h-4 min-w-4 text-gray-700" />
               <p>{t("degree")}</p>
             </div>
             <div className="flex items-center gap-2">
-              <FaUniversity className="text-gray-700" />
+              <FaUniversity className="min-h-4 min-w-4 text-gray-700" />
               <p>{t("affiliation")}</p>
             </div>
             <div className="flex items-center gap-2">
-              <FaEnvelope className="text-gray-700" />
+              <FaEnvelope className="min-h-4 min-w-4 text-gray-700" />
               <a
                 href="mailto:acova@colson.edu.mx"
                 className="text-gray-700 hover:text-orange-500"
@@ -68,30 +77,31 @@ const HomeView = () => {
           </div>
 
           {/* Botones de enlaces */}
-          <div className="animate-fadeIn flex flex-col justify-center gap-4 delay-400 md:flex-row md:justify-start">
+          <div className="animate-fadeIn flex flex-wrap justify-center gap-4 delay-400 md:justify-start">
             <button
               onClick={handleCVDownload}
-              className="flex transform items-center justify-center rounded-full bg-orange-500 px-4 py-2 text-sm text-white shadow-lg transition-all hover:scale-105 hover:bg-orange-600 hover:shadow-xl focus:ring-2 focus:ring-orange-500 focus:ring-offset-2 focus:outline-none"
+              className="flex w-fit transform items-center justify-center rounded-full bg-orange-500 px-4 py-2 text-sm text-white shadow-lg transition-all hover:scale-105 hover:bg-orange-600 hover:shadow-xl focus:ring-2 focus:ring-orange-500 focus:ring-offset-2 focus:outline-none"
               aria-label="View Full CV"
             >
-              <FaFilePdf className="mr-2" />
+              <FaFilePdf className="mr-2 min-h-4 min-w-4" />
               {t("viewFullCV")}
             </button>
             <button
               onClick={handleBriefCVDownload}
-              className="flex transform items-center justify-center rounded-full bg-orange-500 px-4 py-2 text-sm text-white shadow-lg transition-all hover:scale-105 hover:bg-orange-600 hover:shadow-xl focus:ring-2 focus:ring-orange-500 focus:ring-offset-2 focus:outline-none"
+              className="flex w-fit transform items-center justify-center rounded-full bg-orange-500 px-4 py-2 text-sm text-white shadow-lg transition-all hover:scale-105 hover:bg-orange-600 hover:shadow-xl focus:ring-2 focus:ring-orange-500 focus:ring-offset-2 focus:outline-none"
               aria-label="View Brief CV"
             >
-              <FaFilePdf className="mr-2" />
+              <FaFilePdf className="mr-2 min-h-4 min-w-4" />
               {t("viewBriefCV")}
             </button>
             <button
               onClick={handleMotivationLetterDownload}
-              className="flex transform items-center justify-center rounded-full bg-orange-500 px-4 py-2 text-sm text-white shadow-lg transition-all hover:scale-105 hover:bg-orange-600 hover:shadow-xl focus:ring-2 focus:ring-orange-500 focus:ring-offset-2 focus:outline-none"
+              className="flex w-fit transform items-center justify-center gap-1 rounded-full bg-orange-500 px-4 py-2 text-sm text-white shadow-lg transition-all hover:scale-105 hover:bg-orange-600 hover:shadow-xl focus:ring-2 focus:ring-orange-500 focus:ring-offset-2 focus:outline-none"
               aria-label="View Motivation Letter"
             >
-              <FaFilePdf className="mr-2" />
-              {t("viewMotivationLetter")}
+              <FaFilePdf className="mr-1 min-h-4 min-w-4" />
+              <span>{t("viewMotivationLetter")}</span>
+              <span className="font-semibold">(IPCC)</span>
             </button>
           </div>
 
