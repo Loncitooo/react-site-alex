@@ -47,6 +47,15 @@ const HomeView = () => {
         <div className="clip-triangle animate-float absolute -right-24 -bottom-24 h-48 w-48 bg-purple-500 delay-1000" />
         {/* Cuadrado */}
         <div className="animate-float absolute -top-16 right-16 h-40 w-40 rotate-45 bg-blue-400 delay-2000" />
+
+        {/* mas figuras */}
+
+        <div className="animate-float animate-rotate absolute top-456 -left-32 h-50 w-50 rounded-full bg-blue-400" />
+        <div className="animate-float animate-rotate absolute top-329 -right-10 h-40 w-40 bg-purple-500 rotate-45" />
+        <div className="animate-float animate-rotate absolute top-379 right-30 h-40 w-40 bg-green-400 rotate-45" />
+        <div className="animate-float animate-rotate absolute bottom-56 -left-16 h-50 w-50 bg-orange-400" />
+        <div className="animate-float animate-rotate absolute top-258 -left-5 h-45 w-45 rounded-full bg-green-400" />
+
       </div>
 
       <section className="z-10 flex w-full max-w-6xl flex-col items-center gap-12 md:flex-row">
@@ -167,6 +176,7 @@ const HomeView = () => {
       </section>
             {/* Sección de resumen */}
             <Brief/>
+        
     </main>
   );
 };
