@@ -1,5 +1,5 @@
 import React from "react";
-// import {Brief} from "./home/brief-section";
+import {Brief} from "./home/brief-section";
 import { useTranslation } from "react-i18next"; // Importar useTranslation
 import profileImage from "/images/alex/alex_sonriendo.png";
 import { FaXTwitter } from "react-icons/fa6";
@@ -38,7 +38,7 @@ const HomeView = () => {
   };
 
   return (
-    <main className="relative flex flex-col gap-4 min-h-screen items-center justify-center overflow-hidden bg-gray-50 p-6 pt-24 md:pt-16">
+    <main className="relative flex flex-col gap-12 min-h-screen items-center justify-center overflow-hidden bg-gray-50 p-6 pt-24 md:pt-16">
       {/* Figuras decorativas */}
       <div className="absolute inset-0 z-0 overflow-hidden">
         {/* Círculo grande */}
@@ -166,7 +166,7 @@ const HomeView = () => {
         </div>
       </section>
             {/* Sección de resumen */}
-            {/* <Brief/> */}
+            <Brief/>
     </main>
   );
 };
