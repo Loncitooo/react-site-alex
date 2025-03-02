@@ -45,29 +45,22 @@ const resources = {
       articles: "My Articles",
       sheinbaumArticle: "Sheinbaum, leadership, and work.",
       // Publicaciones
+      all: "All",
       publications: "Publications",
-      searchPlaceholder: "Search publication...",
+      courses: "Courses",
+      searchPlaceholder: "Search publications...",
       noPublicationsFound: "No publications or courses found",
+      loading: "Loading...",
       publicationTitles: {
-        publication1:
-          "Labor Upsurge in the North American Automobile Transition: Towards a New Industrial and Labor Relations Stage?",
-        publication2:
-          "ENFORCEMENT OF THE UNITED STATES-MEXICO-CANADA AGREEMENT (“USMCA”) RAPID RESPONSE MECHANISM: VIEWS FROM MEXICAN AUTO SECTOR WORKERS",
-        publication3:
-          "Unraveling the middle-income trap in Mexico. An institutional complementarity approach as seen from the automotive industry",
-        publication4:
-          "A new cycle of industrial product and the onset of labor transformation: Building analytical approaches to study the automotive transition across North America",
+        publication1: "Labor Upsurge in the North American Automobile Transition: Towards a New Industrial and Labor Relations Stage?",
+        publication2: "ENFORCEMENT OF THE UNITED STATES-MEXICO-CANADA AGREEMENT (“USMCA”) RAPID RESPONSE MECHANISM: VIEWS FROM MEXICAN AUTO SECTOR WORKERS",
+        publication3: "Unraveling the middle-income trap in Mexico. An institutional complementarity approach as seen from the automotive industry",
+        publication4: "A new cycle of industrial product and the onset of labor transformation: Building analytical approaches to study the automotive transition across North America",
         publication5: "Labor rights and the USMCA",
-        publication6:
-          "The USMCA and the Mexican automobile industry: towards a new labour model?",
-        publication7:
-          "THE QUICK RESPONSE MECHANISM OF THE UNITED STATES-MEXICO-CANADA AGREEMENT",
-        publication7Subtitle: "OPINIONS OF AUTOMOTRIC WORKERS OF MEXICO",
+        publication6: "The USMCA and the Mexican automobile industry: towards a new labour model?",
+        publication7: "THE QUICK RESPONSE MECHANISM OF THE UNITED STATES-MEXICO-CANADA AGREEMENT",
         publication8: "New Frontiers of the Automobile Industry",
-        publication8Subtitle:
-          "Exploring Geographies, Technology, and Institutional Challenges",
-        course1:
-          "Sustainable Mobilities Course for the PhD in Urban and Environmental Studies.",
+        course1: "Sustainable Mobilities Course for the PhD in Urban and Environmental Studies.",
       },
     },
   },
@@ -113,30 +106,23 @@ const resources = {
       articles: "Artículos",
       sheinbaumArticle: "Sheinbaum, liderazgo y trabajo.",
       // Publicaciones
+      all: "Todos",
       publications: "Publicaciones",
-      searchPlaceholder: "Buscar publicación...",
+      courses: "Cursos",
+      searchPlaceholder: "Buscar publicaciones...",
       noPublicationsFound: "No se encontraron publicaciones o cursos",
+      loading: "Cargando...",
       publicationTitles: {
-        publication1:
-          "El auge laboral en la transición automotriz de América del Norte: ¿Hacia una nueva etapa de relaciones industriales y laborales?",
-        publication2:
-          "APLICACIÓN DEL MECANISMO DE RESPUESTA RÁPIDA DEL TRATADO ENTRE MÉXICO, ESTADOS UNIDOS Y CANADÁ (“T-MEC”): OPINIONES DE LOS TRABAJADORES DEL SECTOR AUTOMOTRIZ MEXICANO",
-        publication3:
-          "Desentrañando la trampa de ingresos medios en México. Un enfoque de complementariedad institucional visto desde la industria automotriz",
-        publication4:
-          "Un nuevo ciclo de producto industrial y el inicio de la transformación laboral: Construyendo enfoques analíticos para estudiar la transición automotriz en América del Norte",
+        publication1: "El auge laboral en la transición automotriz de América del Norte: ¿Hacia una nueva etapa de relaciones industriales y laborales?",
+        publication2: "APLICACIÓN DEL MECANISMO DE RESPUESTA RÁPIDA DEL TRATADO ENTRE MÉXICO, ESTADOS UNIDOS Y CANADÁ (“T-MEC”): OPINIONES DE LOS TRABAJADORES DEL SECTOR AUTOMOTRIZ MEXICANO",
+        publication3: "Desentrañando la trampa de ingresos medios en México. Un enfoque de complementariedad institucional visto desde la industria automotriz",
+        publication4: "Un nuevo ciclo de producto industrial y el inicio de la transformación laboral: Construyendo enfoques analíticos para estudiar la transición automotriz en América del Norte",
         publication5: "Derechos laborales y el T-MEC",
-        publication6:
-          "El T-MEC y la industria automotriz mexicana: ¿hacia un nuevo modelo laboral?",
-        publication7:
-          "EL MECANISMO DE RESPUESTA RÁPIDA DEL TRATADO ENTRE MÉXICO, ESTADOS UNIDOS Y CANADÁ",
-        publication7Subtitle:
-          "OPINIONES DE TRABAJADORES AUTOMOTRICES DE MÉXICO",
+        publication6: "El T-MEC y la industria automotriz mexicana: ¿hacia un nuevo modelo laboral?",
+        publication7: "EL MECANISMO DE RESPUESTA RÁPIDA DEL TRATADO ENTRE MÉXICO, ESTADOS UNIDOS Y CANADÁ",
         publication8: "Nuevas fronteras de la industria automotriz",
-        publication8Subtitle:
-          "Explorando Geografías, Tecnología y Desafíos Institucionales",
-        course1:
-          "Curso de Movilidades Sustentables para el Doctorado en Estudios Urbanos y Ambientales.",
+        course1: "Curso de Movilidades Sustentables para el Doctorado en Estudios Urbanos y Ambientales.",
+          
       },
     },
   },
