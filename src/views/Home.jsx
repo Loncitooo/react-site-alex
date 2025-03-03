@@ -40,7 +40,7 @@ const HomeView = () => {
 
   return (
     <main className="relative flex flex-col gap-4 items-center justify-center overflow-hidden bg-gray-50 ">
-    <div className="  items-center  flex-col flex p-5 pt-24">
+    <div className="  items-center  flex-col flex p-5 pt-24 md:pt-0">
       {/* Figuras decorativas */}
       <div className="absolute inset-0 z-0 overflow-hidden">
         <div className="animate-float absolute -top-32 -left-32 h-64 w-64 rounded-full bg-orange-400" />
