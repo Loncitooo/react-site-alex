@@ -1,8 +1,8 @@
 import React from "react";
 // import {Brief} from "./home/brief-section";
 import { useTranslation } from "react-i18next"; // Importar useTranslation
-import profileImage from "/images/alex/alex_sonriendo.png";
-import profileImage1 from "/images/alex/alex_microfono.jpeg";
+import profileImage from "/images/alex/alex_microfono.jpeg";
+import profileImage1 from "/images/alex/alex_sonriendo.png";
 import { FaXTwitter } from "react-icons/fa6";
 import {
   FaLinkedin,
@@ -54,7 +54,7 @@ const HomeView = () => {
         {/* Text Section */}
         <div className="flex-1 text-center md:text-left">
           <h1 className="animate-fadeIn mb-4 text-3xl font-bold text-gray-900 md:text-5xl">
-            {t("hello")} <span className="text-orange-500">{t("name")}</span>
+            {t("ALEX")} <span className="text-orange-500">{t("COVARRUBIAS BALDENEBRO")}</span>
           </h1>
 
           {/* Información de Alex con íconos */}
@@ -71,7 +71,7 @@ const HomeView = () => {
               <FaEnvelope className="flex items-start min-h-4 min-w-4 text-gray-700" />
               <a
                 href="mailto:acova@colson.edu.mx"
-                className="text-gray-700 hover:text-orange-500 "
+                className="text-gray-700 hover:text-orange-500"
               >
                 {t("email")}
               </a>
@@ -297,6 +297,6 @@ const HomeView = () => {
     </main>
     
   );
-};
+}
 
 export default HomeView;

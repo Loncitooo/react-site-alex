@@ -6,8 +6,6 @@ const resources = {
   en: {
     translation: {
       // Home
-      hello: "HELLO, I'M",
-      name: "ALEX COVARRUBIAS VALDENEBRO",
       degree:
         "Degree: Doctor in Industrial and Labor Relations. Cornell University",
       affiliation: "Affiliation: Center for Border Studies",
@@ -66,8 +64,6 @@ const resources = {
   },
   es: {
     translation: {
-      hello: "HOLA, SOY",
-      name: "ALEX COVARRUBIAS VALDENEBRO",
       degree:
         "Grado: Doctor en Relaciones Industriales y Laborales. Universidad de Cornell",
       affiliation: "Adscripción: Centro de Estudios Transfronterizos",
