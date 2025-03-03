@@ -3,36 +3,50 @@ import { FaDownload } from "react-icons/fa";
 
 export function PublicationCard({ pdfLocation, coverImage, title, subtitle }) {
   return (
-    <div className="animate-slideIn flex flex-col rounded-lg shadow-lg transition-all delay-200 hover:shadow-2xl">
+    <div className="animate-slideIn group relative flex aspect-[3/4] overflow-hidden rounded-lg shadow-lg transition-all delay-200 hover:shadow-xl">
+      {/* Imagen de fondo */}
       <img
         src={coverImage}
         alt={title}
-        className="max-h-72 w-full rounded-t-lg"
+        className="h-full w-full object-cover" // La imagen cubre toda la tarjeta
       />
-      <div className="flex flex-1 flex-col items-center justify-between gap-4 p-4">
-        <div className="flex flex-col gap-1">
-          <h2 className="line-clamp-2 font-semibold" title={title}>
+
+      {/* Capa semitransparente para mejorar la legibilidad */}
+      <div className="absolute inset-0 bg-black/40 transition-all group-hover:bg-black/50" />
+
+      {/* Contenido superpuesto */}
+      <div className="absolute inset-0 flex flex-col justify-end p-4 text-white">
+        {/* Título y subtítulo */}
+        <div className="mb-4">
+          <h2 className="line-clamp-2 text-xl font-semibold" title={title}>
             {title}
           </h2>
-          <h3 className="line-clamp-2 text-sm" title={subtitle}>
-            {subtitle}
-          </h3>
+          {subtitle && (
+            <h3 className="line-clamp-2 text-base" title={subtitle}>
+              {subtitle}
+            </h3>
+          )}
         </div>
-        <div className="flex items-center gap-4">
+
+        {/* Botones de acción */}
+        <div className="flex items-center gap-3">
+          {/* Botón "Leer" */}
           <a
             href={pdfLocation}
             target="_blank"
             rel="noreferrer"
-            className="flex aspect-square transform items-center justify-center gap-2 rounded-full border-1 border-blue-500 bg-transparent p-2 text-blue-500 shadow-lg transition-all hover:scale-105 hover:bg-blue-500 hover:text-white hover:shadow-xl focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:outline-none"
+            className="flex aspect-square transform items-center justify-center rounded-full border border-white bg-transparent p-2 text-white shadow-md transition-all hover:scale-105 hover:bg-white hover:text-blue-500 hover:shadow-lg focus:ring-2 focus:ring-white focus:ring-offset-2 focus:outline-none"
             aria-label="Read"
             title="Read"
           >
             <CiRead className="text-xl" />
           </a>
+
+          {/* Botón "Descargar" */}
           <a
             href={pdfLocation}
             download
-            className="flex aspect-square transform items-center justify-center gap-2 rounded-full border-1 border-orange-500 bg-transparent p-2 text-orange-500 shadow-lg transition-all hover:scale-105 hover:bg-orange-500 hover:text-white hover:shadow-xl focus:ring-2 focus:ring-orange-500 focus:ring-offset-2 focus:outline-none"
+            className="flex aspect-square transform items-center justify-center rounded-full border border-white bg-transparent p-2 text-white shadow-md transition-all hover:scale-105 hover:bg-white hover:text-orange-500 hover:shadow-lg focus:ring-2 focus:ring-white focus:ring-offset-2 focus:outline-none"
             aria-label="Download"
             title="Download"
           >
