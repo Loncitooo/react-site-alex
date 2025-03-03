@@ -2,6 +2,7 @@ import React from "react";
 import { useTranslation } from "react-i18next";
 import profileImage from "/images/alex/alex_microfono.jpeg";
 import profileImage1 from "/images/alex/alex_sonriendo.png";
+import { Brief } from "./home/brief-section";
 import { FaXTwitter } from "react-icons/fa6";
 import {
   FaLinkedin,
@@ -39,7 +40,7 @@ const HomeView = () => {
 
   return (
     <main className="relative flex flex-col gap-12 items-center justify-center overflow-hidden bg-gray-50 ">
-    <div className=" min-h-screen items-center flex p-5 pt-24">
+    <div className=" min-h-screen items-center  flex-col flex p-5 pt-24">
       {/* Figuras decorativas */}
       <div className="absolute inset-0 z-0 overflow-hidden">
         <div className="animate-float absolute -top-32 -left-32 h-64 w-64 rounded-full bg-orange-400" />
@@ -168,7 +169,7 @@ const HomeView = () => {
           </div>
         </div>
       </section>
-
+      <Brief/>
       {/* Imagen segundo nivel */}
       <section className="relative flex flex-col md:flex-row items-center justify-center mt-28 w-full max-w-6xl px-6">
         <div className="w-full md:w-1/2 lg:w-1/3 overflow-hidden rounded-2xl shadow-2xl">
@@ -199,7 +200,7 @@ const HomeView = () => {
           </div>
         </div>
       </section>
-
+      
       {/* Sección de logos de clientes */}
       <section className="mt-10 py-16 bg-white w-full">
         <div className="max-w-6xl mx-auto px-6">
@@ -284,6 +285,7 @@ const HomeView = () => {
           </div>
         </div>
       </section>
+      </div>
     </main>
   );
 }
