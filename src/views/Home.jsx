@@ -1,8 +1,15 @@
 import React from "react";
+<<<<<<< HEAD
 // import {Brief} from "./home/brief-section";
 import { useTranslation } from "react-i18next"; // Importar useTranslation
 import profileImage from "/images/alex/alex_sonriendo.png";
 import { FaXTwitter } from "react-icons/fa6";
+=======
+import profileImage from "/images/alex/alex_sonriendo.png"; // Ruta de la imagen de perfil
+import profileImage1 from "/images/alex/alex_microfono.jpeg"; 
+
+
+>>>>>>> 8de1dbfeff862602afbef3da72fe7e965aa5c88c
 import {
   FaLinkedin,
   FaGithub,
@@ -38,6 +45,7 @@ const HomeView = () => {
   };
 
   return (
+<<<<<<< HEAD
     <main className="relative flex flex-col gap-4 min-h-screen items-center justify-center overflow-hidden bg-gray-50 p-6 pt-24 md:pt-16">
       {/* Figuras decorativas */}
       <div className="absolute inset-0 z-0 overflow-hidden">
@@ -73,10 +81,118 @@ const HomeView = () => {
                 className="text-gray-700 hover:text-orange-500"
               >
                 {t("email")}
+=======
+    <>
+      <main className="relative flex min-h-screen items-center justify-center overflow-hidden bg-gray-50 p-6 pt-24 md:pt-16">
+        {/* Figuras decorativas */}
+        <div className="absolute inset-0 z-0 overflow-hidden">
+          {/* Círculo grande */}
+          <div className="animate-float absolute -top-32 -left-32 h-64 w-64 rounded-full bg-orange-400" />
+          {/* Triángulo */}
+          <div className="clip-triangle animate-float absolute -right-24 -bottom-24 h-48 w-48 bg-purple-500 delay-1000" />
+          {/* Cuadrado */}
+          <div className="animate-float absolute -top-16 right-16 h-40 w-40 rotate-45 bg-blue-400 delay-2000" />
+        </div>
+
+        <section className="z-10 flex w-full max-w-6xl flex-col items-center gap-12 md:flex-row">
+          {/* Text Section */}
+          <div className="flex-1 text-center md:text-left">
+            <h1 className="animate-fadeIn mb-4 text-5xl font-bold text-gray-900">
+              HELLO, I'M <span className="text-orange-500">ALEX COVARRUBIAS VALDENEBRO</span>
+            </h1>
+
+            {/* Información de Alex con íconos */}
+            <div className="animate-fadeIn mb-6 text-gray-600 delay-200 flex flex-col gap-2">
+              <div className="flex items-center gap-2">
+                <FaUserGraduate className="text-gray-700" />
+                <p>Degree: Doctor in Industrial and Labor Relations. Cornell University</p>
+              </div>
+              <div className="flex items-center gap-2">
+                <FaUniversity className="text-gray-700" />
+                <p>Affiliation: Center for Border Studies</p>
+              </div>
+              <div className="flex items-center gap-2">
+                <FaEnvelope className="text-gray-700" />
+                <a
+                  href="mailto:acova@colson.edu.mx"
+                  className="text-gray-700 hover:text-orange-500"
+                >
+                  acova@colson.edu.mx
+                </a>
+              </div>
+            </div>
+
+            {/* Botones de enlaces */}
+            <div className="animate-fadeIn flex flex-col justify-center gap-4 delay-400 md:flex-row md:justify-start">
+              <button
+                onClick={handleCVDownload}
+                className="flex transform items-center justify-center rounded-full bg-orange-500 px-4 py-2 text-sm text-white shadow-lg transition-all hover:scale-105 hover:bg-orange-600 hover:shadow-xl focus:ring-2 focus:ring-orange-500 focus:ring-offset-2 focus:outline-none"
+                aria-label="View Full CV"
+              >
+                <FaFilePdf className="mr-2" />
+                View Full CV
+              </button>
+              <button
+                onClick={handleBriefCVDownload}
+                className="flex transform items-center justify-center rounded-full bg-orange-500 px-4 py-2 text-sm text-white shadow-lg transition-all hover:scale-105 hover:bg-orange-600 hover:shadow-xl focus:ring-2 focus:ring-orange-500 focus:ring-offset-2 focus:outline-none"
+                aria-label="View Brief CV"
+              >
+                <FaFilePdf className="mr-2" />
+                View Brief CV
+              </button>
+              <button
+                onClick={handleMotivationLetterDownload}
+                className="flex transform items-center justify-center rounded-full bg-orange-500 px-4 py-2 text-sm text-white shadow-lg transition-all hover:scale-105 hover:bg-orange-600 hover:shadow-xl focus:ring-2 focus:ring-orange-500 focus:ring-offset-2 focus:outline-none"
+                aria-label="View Motivation Letter"
+              >
+                <FaFilePdf className="mr-2" />
+                View Motivation Letter
+              </button>
+            </div>
+
+            {/* Redes sociales */}
+            <div className="animate-fadeIn mt-8 flex justify-center gap-6 delay-500 md:justify-start">
+              <a
+                href="https://www.linkedin.com/in/alex"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="transform text-gray-700 transition-colors hover:scale-110 hover:text-orange-500"
+                aria-label="LinkedIn"
+              >
+                <FaLinkedin size={28} />
+              </a>
+              <a
+                href="https://github.com/alex"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="transform text-gray-700 transition-colors hover:scale-110 hover:text-orange-500"
+                aria-label="GitHub"
+              >
+                <FaGithub size={28} />
+              </a>
+              <a
+                href="https://www.instagram.com/alex"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="transform text-gray-700 transition-colors hover:scale-110 hover:text-orange-500"
+                aria-label="Instagram"
+              >
+                <FaInstagram size={28} />
+              </a>
+              <a
+                href="https://twitter.com/alex"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="transform text-gray-700 transition-colors hover:scale-110 hover:text-orange-500"
+                aria-label="Twitter"
+              >
+                <FaTwitter size={28} />
+>>>>>>> 8de1dbfeff862602afbef3da72fe7e965aa5c88c
               </a>
             </div>
           </div>
 
+<<<<<<< HEAD
           {/* Botones de enlaces */}
           <div className="animate-fadeIn flex flex-wrap justify-center gap-4 delay-400 md:justify-start">
             <button
@@ -168,7 +284,31 @@ const HomeView = () => {
             {/* Sección de resumen */}
             {/* <Brief/> */}
     </main>
+=======
+          {/* Diseño y seccion de imagen */}
+          <div className="relative h-72 w-72 flex-shrink-0 md:h-96 md:w-96">
+            {/* Marco decorativo */}
+            <div className="animate-slideIn absolute inset-0 -z-10 rotate-6 transform rounded-2xl bg-gradient-to-r from-orange-400 to-purple-500" />
+            <div className="absolute inset-0 -z-10 -rotate-3 transform rounded-2xl bg-white" />
+
+            {/* Imagen superpuesta */}
+            <div className="relative flex h-full w-full items-center justify-center">
+              <div className="h-full w-full overflow-hidden rounded-2xl shadow-2xl">
+                <img
+                  src={profileImage}
+                  alt="Alex smiling"
+                  className="animate-fadeIn h-full w-full rounded-2xl object-cover delay-300"
+                />
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+
+    </>
+>>>>>>> 8de1dbfeff862602afbef3da72fe7e965aa5c88c
   );
-};
+}
 
 export default HomeView;
