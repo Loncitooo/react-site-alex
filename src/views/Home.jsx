@@ -39,8 +39,8 @@ const HomeView = () => {
   };
 
   return (
-    <main className="relative flex flex-col gap-12 items-center justify-center overflow-hidden bg-gray-50 ">
-    <div className=" min-h-screen items-center  flex-col flex p-5 pt-24">
+    <main className="relative flex flex-col gap-4 items-center justify-center overflow-hidden bg-gray-50 ">
+    <div className="  items-center  flex-col flex p-5 pt-24">
       {/* Figuras decorativas */}
       <div className="absolute inset-0 z-0 overflow-hidden">
         <div className="animate-float absolute -top-32 -left-32 h-64 w-64 rounded-full bg-orange-400" />
@@ -57,7 +57,7 @@ const HomeView = () => {
 
       </div>
 
-      <section className="z-10 flex w-full max-w-6xl flex-col items-center gap-12 md:flex-row md:pl-6">
+      <section className="z-10 min-h-screen flex w-full max-w-6xl flex-col items-center gap-12 md:flex-row md:pl-6">
         {/* Text Section */}
         <div className="flex-1 text-center md:text-left">
           <h1 className="animate-fadeIn mb-4 text-3xl font-bold text-gray-900 md:text-5xl">
@@ -170,6 +170,7 @@ const HomeView = () => {
         </div>
       </section>
       <Brief/>
+      {/* seccion nueva */}
       {/* Imagen segundo nivel */}
       <section className="relative flex flex-col md:flex-row items-center justify-center mt-28 w-full max-w-6xl px-6">
         <div className="w-full md:w-1/2 lg:w-1/3 overflow-hidden rounded-2xl shadow-2xl">
