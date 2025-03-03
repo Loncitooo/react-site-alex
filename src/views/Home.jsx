@@ -38,7 +38,8 @@ const HomeView = () => {
   };
 
   return (
-    <main className="relative flex flex-col gap-12 min-h-screen items-center justify-center overflow-hidden bg-gray-50 p-6 pt-24 md:pt-16">
+    <main className="relative flex flex-col gap-12 items-center justify-center overflow-hidden bg-gray-50 p-6 pt-24 md:pt-16">
+    <div className=" min-h-screen items-center flex ">
       {/* Figuras decorativas */}
       <div className="absolute inset-0 z-0 overflow-hidden">
         {/* Círculo grande */}
@@ -50,7 +51,7 @@ const HomeView = () => {
 
         {/* mas figuras */}
 
-        <div className="animate-float animate-rotate absolute top-456 -left-32 h-50 w-50 rounded-full bg-blue-400 lg:top-150 lg:left-230" />
+        <div className="animate-float animate-rotate absolute top-456 -left-32 h-50 w-50 rounded-full bg-blue-400 lg:top-150 lg:left-310" />
         <div className="animate-float animate-rotate absolute top-329 -right-10 h-40 w-40 bg-purple-500 rotate-45 lg:top-200 lg:right-70" />
         <div className="animate-float animate-rotate absolute top-379 right-30 h-40 w-40 bg-green-400 rotate-45" />
         <div className="animate-float animate-rotate absolute bottom-56 -left-16 h-50 w-50 bg-orange-400 lg:bottom-70" />
@@ -175,8 +176,8 @@ const HomeView = () => {
         </div>
       </section>
             {/* Sección de resumen */}
+    </div>
             <Brief/>
-        
     </main>
   );
 };
