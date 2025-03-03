@@ -1,7 +1,7 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
 import profileImage from "/images/alex/alex_microfono.jpeg";
-import profileImage1 from "/images/alex/alex_sonriendo.png";
+import profileImage1 from "/images/alex/alex_fondo.jpeg";
 import { Brief } from "./home/brief-section";
 import { FaXTwitter } from "react-icons/fa6";
 import {
