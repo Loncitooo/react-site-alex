@@ -49,7 +49,6 @@ function PublicationsView() {
     { id: "courses", label: t("courses") },
   ];
 
-  // ... imports se mantienen igual ...
 
 const publications = useMemo(() => {
   return [
@@ -121,7 +120,6 @@ const publications = useMemo(() => {
   ];
 }, [t]);
 
-// ... el resto del código se mantiene igual con las mejoras de estilo para las imágenes ...
     
 
   useEffect(() => {
