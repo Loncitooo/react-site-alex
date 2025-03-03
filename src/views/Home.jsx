@@ -38,8 +38,8 @@ const HomeView = () => {
   };
 
   return (
-    <main className="relative flex flex-col gap-12 items-center justify-center overflow-hidden bg-gray-50 p-6 pt-24 md:pt-16">
-    <div className=" min-h-screen items-center flex ">
+    <main className="relative flex flex-col gap-12 items-center justify-center overflow-hidden bg-gray-50 ">
+    <div className=" min-h-screen items-center flex p-5 pt-24">
       {/* Figuras decorativas */}
       <div className="absolute inset-0 z-0 overflow-hidden">
         {/* Círculo grande */}
@@ -59,7 +59,7 @@ const HomeView = () => {
 
       </div>
 
-      <section className="z-10 flex w-full max-w-6xl flex-col items-center gap-12 md:flex-row">
+      <section className="z-10 flex w-full max-w-6xl flex-col items-center gap-12 md:flex-row md:pl-6">
         {/* Text Section */}
         <div className="flex-1 text-center md:text-left">
           <h1 className="animate-fadeIn mb-4 text-3xl font-bold text-gray-900 md:text-5xl">
@@ -67,7 +67,7 @@ const HomeView = () => {
           </h1>
 
           {/* Información de Alex con íconos */}
-          <div className="animate-fadeIn mb-6 flex flex-col gap-2 text-gray-600 delay-200">
+          <div className="animate-fadeIn mb-6 flex flex-col gap-2 text-gray-600 delay-200 ">
             <div className="flex items-center gap-2">
               <FaUserGraduate className="min-h-4 min-w-4 text-gray-700" />
               <p>{t("degree")}</p>
