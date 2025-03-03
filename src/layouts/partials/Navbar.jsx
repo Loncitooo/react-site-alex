@@ -29,7 +29,7 @@ function Navbar({ backgroundStyle }) {
           ALEX COVARRUBIAS
         </a>
 
-        <nav className="hidden items-center space-x-6 md:flex">
+        <nav className="hidden items-center space-x-6 lg:flex">
           <NavbarLink to="/">{t("home")}</NavbarLink>
           <NavbarLink to="/publicaciones">{t("publications")}</NavbarLink>
           <NavbarLink to="/proyectos">{t("projects")}</NavbarLink>
@@ -47,7 +47,7 @@ function Navbar({ backgroundStyle }) {
 
         <button
           onClick={toggleMenu}
-          className="relative flex h-10 w-10 cursor-pointer flex-col items-center justify-center space-y-1.5 focus:outline-none md:hidden"
+          className="relative flex h-10 w-10 cursor-pointer flex-col items-center justify-center space-y-1.5 focus:outline-none lg:hidden"
           aria-label="Toggle menu"
         >
           <div
@@ -70,7 +70,7 @@ function Navbar({ backgroundStyle }) {
 
       {isMenuOpen && (
         <div className="w-full flex justify-end">
-          <div className="bg-opacity-95 p-4 mt-2 rounded-2xl w-3/4 bg-white shadow-2xl md:hidden">
+          <div className="bg-opacity-95 p-4 mt-2 rounded-2xl w-3/4 bg-white shadow-2xl md:w-1/2 lg:hidden">
             <nav className="flex flex-col items-end gap-4 text-2xl">
               <NavbarLink to="/" onClick={toggleMenu}>
                 {t("home")}

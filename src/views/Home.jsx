@@ -50,11 +50,11 @@ const HomeView = () => {
 
         {/* mas figuras */}
 
-        <div className="animate-float animate-rotate absolute top-456 -left-32 h-50 w-50 rounded-full bg-blue-400" />
-        <div className="animate-float animate-rotate absolute top-329 -right-10 h-40 w-40 bg-purple-500 rotate-45" />
+        <div className="animate-float animate-rotate absolute top-456 -left-32 h-50 w-50 rounded-full bg-blue-400 lg:top-150 lg:left-230" />
+        <div className="animate-float animate-rotate absolute top-329 -right-10 h-40 w-40 bg-purple-500 rotate-45 lg:top-200 lg:right-70" />
         <div className="animate-float animate-rotate absolute top-379 right-30 h-40 w-40 bg-green-400 rotate-45" />
-        <div className="animate-float animate-rotate absolute bottom-56 -left-16 h-50 w-50 bg-orange-400" />
-        <div className="animate-float animate-rotate absolute top-258 -left-5 h-45 w-45 rounded-full bg-green-400" />
+        <div className="animate-float animate-rotate absolute bottom-56 -left-16 h-50 w-50 bg-orange-400 lg:bottom-70" />
+        <div className="animate-float animate-rotate absolute top-258 -left-5 h-45 w-45 rounded-full bg-green-400 lg:top-280" />
 
       </div>
 
