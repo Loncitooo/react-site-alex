@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import NavbarLink from "../../components/NavbarLink";
 import { FaGlobe } from "react-icons/fa";
@@ -6,6 +6,7 @@ import { FaGlobe } from "react-icons/fa";
 function Navbar({ backgroundStyle }) {
   const { t, i18n } = useTranslation();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -16,14 +17,29 @@ function Navbar({ backgroundStyle }) {
     i18n.changeLanguage(newLanguage);
   };
 
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
     <header
-    className={`fixed top-0 left-0 z-50 min-h-20 w-full p-4 ${
-      backgroundStyle === "transparent"
-        ? "bg-transparent"
-        : "bg-white border-b-2 border-orange-500"
-    }`}
-  >
+      className={`fixed top-0 left-0 z-50 min-h-20 w-full p-4 transition-colors duration-300 ${
+        isScrolled || backgroundStyle !== "transparent"
+          ? "bg-white border-b-2 border-orange-500"
+          : "bg-transparent"
+      }`}
+    >
       <div className="container mx-auto flex items-center justify-between">
         <a href="/" className="text-2xl font-bold text-gray-900 md:text-3xl">
           ALEX COVARRUBIAS
@@ -69,8 +85,8 @@ function Navbar({ backgroundStyle }) {
       </div>
 
       {isMenuOpen && (
-        <div className="w-full flex justify-end">
-          <div className="bg-opacity-95 p-4 mt-2 rounded-2xl w-3/4 bg-white shadow-2xl md:w-1/2 lg:hidden">
+        <div className=" relative w-full flex justify-end">
+          <div className=" absolute bg-opacity-95 p-4 mt-2 rounded-2xl w-3/4 bg-white shadow-2xl md:w-1/2 lg:hidden">
             <nav className="flex flex-col items-end gap-4 text-2xl">
               <NavbarLink to="/" onClick={toggleMenu}>
                 {t("home")}
