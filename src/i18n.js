@@ -1,5 +1,6 @@
 import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
+import BriefCard from "./components/brief/brief-card";
 
 // Traducciones en inglés y español
 const resources = {
@@ -59,8 +60,24 @@ const resources = {
         publication7: "THE QUICK RESPONSE MECHANISM OF THE UNITED STATES-MEXICO-CANADA AGREEMENT",
         publication8: "New Frontiers of the Automobile Industry",
         course1: "Sustainable Mobilities Course for the PhD in Urban and Environmental Studies.",
-      },
     },
+        // Brief
+        brief : "Brief",
+        briefCard:{
+          briefTitle1:"Expert in the Mexican Auto Industry",
+          briefDescription1:"Top expert on the Mexican Auto Industry, its management and labor transitions ",
+          briefTitle2:"Specialist in Labor Relations and Just Transitions",
+          briefDescription2:"Top expert on industrial and labor relations systems changes, labor relations and just transition ",
+          briefTitle3:"Specialist in Socio-Technical and Energy Transitions",
+          briefDescription3:"Socio-technical, energy and industrial transition specialist  ",
+          briefTitle4:"Specialist in Transport Electrification and Sustainable Mobility",
+          briefDescription4:"Transport electrification and sustainable mobilities specialist ",
+          briefTitle5:"National Researcher Level III (Highest Rank)",
+          briefDescription5:"Highest rank as Mexican National Research –Level III  ",
+          briefTitle6:"Leader in National and International Research Networks",
+          briefDescription6:"Leadership in creating and promoting national and international research networks",
+        },
+      },
   },
   es: {
     translation: {
@@ -119,6 +136,22 @@ const resources = {
         publication8: "Nuevas fronteras de la industria automotriz",
         course1: "Curso de Movilidades Sustentables para el Doctorado en Estudios Urbanos y Ambientales.",
           
+      },
+      // Brief
+      brief : "Resumen",
+      briefCard:{
+        briefTitle1:"Experto en la Industria Automotriz Mexicana",
+        briefDescription1:"Experto en la industria automotriz mexicana, su gestión y transiciones laborales",
+        briefTitle2:"Especialista en Relaciones Laborales y Transiciones Justas",
+        briefDescription2:"Experto en cambios en los sistemas industriales y de relaciones laborales, relaciones laborales y transición justa",
+        briefTitle3:"Especialista en Transiciones Socio-Técnicas y Energéticas",
+        briefDescription3:"Especialista en transición sociotécnica, energética e industrial",
+        briefTitle4:"Especialista en Electrificación del Transporte y Movilidad Sostenible",
+        briefDescription4:"Especialista en electrificación del transporte y movilidades sustentables",
+        briefTitle5:"Investigador Nacional Nivel III (Máximo Rango)",
+        briefDescription5:"Máximo rango como Investigador Nacional de México – Nivel III",
+        briefTitle6:"Líder en Redes de Investigación Nacionales e Internacionales",
+        briefDescription6:"Liderazgo en la creación y promoción de redes de investigación nacionales e internacionales",
       },
     },
   },
