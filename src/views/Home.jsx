@@ -61,7 +61,7 @@ const HomeView = () => {
         {/* Text Section */}
         <div className="flex-1 text-center md:text-left">
           <h1 className="animate-fadeIn mb-4 text-3xl font-bold text-gray-900 md:text-5xl">
-            {t("ALEX")} <span className="text-orange-500">{t("COVARRUBIAS BALDENEBRO")}</span>
+            {t("ALEX")} <span className="text-orange-500">{t("COVARRUBIAS-V")}</span>
           </h1>
 
           {/* Información de Alex con íconos */}
